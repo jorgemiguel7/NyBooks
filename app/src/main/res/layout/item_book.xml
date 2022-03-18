@@ -3,25 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".presentation.books.BooksActivity">
+    android:layout_height="wrap_content"
+    android:padding="16dp">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarMain"
+    <TextView
+        android:id="@+id/textTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerBooks"
+    <TextView
+        android:id="@+id/textAuthor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
-        tools:listitem="@layout/item_book" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textTitle"
+        tools:text="Author" />
 </androidx.constraintlayout.widget.ConstraintLayout>
