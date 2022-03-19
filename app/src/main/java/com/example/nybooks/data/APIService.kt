@@ -3,6 +3,8 @@ package com.example.nybooks.data
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
+//import retrofit2.converter.moshi.MoshiConverterFactory
+
 object APIService {
     private fun initRetrfit(): Retrofit{
         return Retrofit.Builder()
@@ -11,5 +13,5 @@ object APIService {
             .build()
     }
 
-    val service = initRetrfit().create(NYTServices::class.java)
+    val service: NYTServices = initRetrfit().create(NYTServices::class.java)
 }
