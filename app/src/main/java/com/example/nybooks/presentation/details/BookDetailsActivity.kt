@@ -15,7 +15,7 @@ class BookDetailsActivity : BaseActivity() {
         binding = ActivityBookDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupToolbar(binding.includeToolbar.toolbarMain, R.string.book_datails_title)
+        setupToolbar(binding.includeToolbar.toolbarMain, R.string.book_datails_title, true)
 
         binding.bookDetailsTitleText.text = intent.getStringExtra(EXTRA_TITLE)
         binding.bookDetailsDescriptionText.text = intent.getStringExtra(EXTRA_DESCRIPTION)
