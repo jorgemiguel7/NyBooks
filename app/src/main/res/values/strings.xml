@@ -5,6 +5,7 @@
     <string name="books_title">Books</string>
 
     <!-- Book Details Activity -->
+    <string name="book_datails_title">Book Details</string>
     <string name="book_details_title_text">Title</string>
     <string name="book_details_description_text">Description</string>
 </resources>
