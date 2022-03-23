@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nybooks.R
+import com.example.nybooks.data.repository.BooksApiDataSource
 import com.example.nybooks.databinding.ActivityBooksBinding
 import com.example.nybooks.presentation.base.BaseActivity
 import com.example.nybooks.presentation.details.BookDetailsActivity
@@ -19,7 +20,8 @@ class BooksActivity : BaseActivity() {
 
         setupToolbar(binding.includeToolbar.toolbarMain, R.string.books_title)
 
-        val viewModel: BooksViewModel = ViewModelProvider(this).get(BooksViewModel::class.java)
+        val viewModel: BooksViewModel = BooksViewModel.ViewModelFactory(BooksApiDataSource())
+                .create(BooksViewModel::class.java)
 
         viewModel.booksLiveData.observe(this) {
             it?.let { books ->
